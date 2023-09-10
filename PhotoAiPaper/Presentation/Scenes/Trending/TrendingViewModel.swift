@@ -16,13 +16,13 @@ final class TrendingViewModel {
     }
     
     func fetchTrendingDocuments(completion: @escaping ([WallpaperUIItem]?, Error?) -> Void) {
-            firestoreRepository.fetchTrendingDocuments { results, error in
-                let wallpapers = results?.compactMap { document in
-                    var wallpaper = try? document.data(as: WallpaperUIItem.self)
-                    wallpaper?.documentID = document.documentID
-                    return wallpaper
-                }
-                completion(wallpapers, error)
+        firestoreRepository.fetchTrendingDocuments { results, error in
+            let wallpapers = results?.compactMap { document in
+                var wallpaper = try? document.data(as: WallpaperUIItem.self)
+                wallpaper?.documentID = document.documentID
+                return wallpaper
             }
+            completion(wallpapers, error)
         }
+    }
 }
