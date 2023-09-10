@@ -26,8 +26,7 @@ final class ListImagesViewController: BaseViewController {
         collectionView.setCollectionViewLayout(CollectionLayout.columns(.three).layout, animated: false)
         
         viewModel.wallpapers(for: category) { wallpapaerItems, error in
-            
-        
+
             if let wallpapaerItems {
                 self.dataSource.items = wallpapaerItems
                 self.collectionView.reloadData()

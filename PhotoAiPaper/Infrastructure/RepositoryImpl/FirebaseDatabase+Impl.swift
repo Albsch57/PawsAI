@@ -13,9 +13,7 @@ final class FirebaseDatabaseImpl: FirestoreDatabase {
     private let db = Firestore.firestore()
     
     func documents(for category: Category, _ completion: @escaping ([QueryDocumentSnapshot]?, Error?) -> Void) {
-        
-       
-        
+
         //        // Получаете список документов в коллекции
         //        db.collection("Trending").getDocuments { snapshot, error in
         //

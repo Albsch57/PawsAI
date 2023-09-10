@@ -11,7 +11,7 @@ extension LookPageViewController {
     
     final class DataSource: NSObject, UICollectionViewDataSource {
         var items: [LookPageItem] =
-        [.time, .icons]
+        [.date, .time, .icons]
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             items.count

@@ -12,35 +12,57 @@ class LookPageCollectionViewCell: BaseImageCollectionViewCell {
     override class var reuseId: String {
         "LookPageCollectionViewIdentifier"
     }
-
-    private let titleAndTimeStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.spacing = 8
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
-    }()
     
-    private let titleLabel: UILabel = {
-        let title = UILabel()
-        title.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        title.textColor = .white
-        title.numberOfLines = 0
-        title.textAlignment = .center
-        title.translatesAutoresizingMaskIntoConstraints = false
+//    private let titleAndTimeStackView: UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.axis = .vertical
+//        stackView.alignment = .center
+//        stackView.spacing = 8
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        return stackView
+//    }()
+    
+
+//    func makeLabel(fontSize: CGFloat, weight: UIFont.Weight, textColor: UIColor, numberOfLines: Int, textAlignment: NSTextAlignment) -> UILabel {
+    func makeLabel(fontSize: CGFloat) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }
+    
+    lazy var titleLabel: UILabel = {
+        let title = makeLabel(fontSize: 30)
         return title
     }()
     
-    private let timeLabel: UILabel = {
-        let time = UILabel()
-        time.font = UIFont.systemFont(ofSize: 100, weight: .bold)
-        time.textColor = .white
-        time.numberOfLines = 0
-        time.textAlignment = .center
-        time.translatesAutoresizingMaskIntoConstraints = false
+    lazy var timeLabel: UILabel = {
+        let time = makeLabel(fontSize: 100)
         return time
     }()
+    
+//    private let titleLabel: UILabel = {
+//        let title = UILabel()
+//        title.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+//        title.textColor = .white
+//        title.numberOfLines = 0
+//        title.textAlignment = .center
+//        title.translatesAutoresizingMaskIntoConstraints = false
+//        return title
+//    }()
+//
+//    private let timeLabel: UILabel = {
+//        let time = UILabel()
+//        time.font = UIFont.systemFont(ofSize: 100, weight: .bold)
+//        time.textColor = .white
+//        time.numberOfLines = 0
+//        time.textAlignment = .center
+//        time.translatesAutoresizingMaskIntoConstraints = false
+//        return time
+//    }()
     
     
     override init(frame: CGRect) {
@@ -52,25 +74,19 @@ class LookPageCollectionViewCell: BaseImageCollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     func configure(with item: LookPageItem) {
         switch item {
             
+        case .date:
+            titleLabel.text = "Monday, December 22"
         case .time:
-            
-            titleLabel.text = "Monday, December 10 10:10"
-            
-            
+            timeLabel.text = "10:10"
+  
         case .icons:
-           
             imageView.image = UIImage(named: "homeScreen")!
             imageView.contentMode = .scaleAspectFit
         }
-        
-
     }
-    
 }
 
 extension LookPageCollectionViewCell {
@@ -78,20 +94,17 @@ extension LookPageCollectionViewCell {
         //        layer.cornerRadius = 12
         //
         //      layer.masksToBounds = true
+           
+//        contentView.addSubview(titleAndTimeStackView)
+//        titleAndTimeStackView.addArrangedSubview(titleLabel)
+//        titleAndTimeStackView.addArrangedSubview(timeLabel)
         
-       
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(timeLabel)
         
-       
-        contentView.addSubview(titleAndTimeStackView)
-        titleAndTimeStackView.addArrangedSubview(titleLabel)
-        titleAndTimeStackView.addArrangedSubview(timeLabel)
-        
-
-      
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            
             imageView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor),
@@ -99,12 +112,16 @@ extension LookPageCollectionViewCell {
         ])
         
         NSLayoutConstraint.activate([
-           
-           
+            titleLabel.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 30),
+            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            titleAndTimeStackView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 32),
-            titleAndTimeStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleAndTimeStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            timeLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            timeLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//            timeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24)
+            
+//            titleAndTimeStackView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 32),
+//            titleAndTimeStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            titleAndTimeStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             //              titleAndTimeStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             
             

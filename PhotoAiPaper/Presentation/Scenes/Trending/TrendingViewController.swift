@@ -10,10 +10,12 @@ import UIKit
 class TrendingViewController: BaseViewController {
     
     private lazy var items = [WallpaperUIItem]()
-
+    
+    private let viewModel = TrendingViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         navigationItem.title = "Trending"
         
         collectionView.register(BaseImageCollectionViewCell.self, forCellWithReuseIdentifier: BaseImageCollectionViewCell.reuseId)
@@ -29,30 +31,46 @@ class TrendingViewController: BaseViewController {
     }
     
     private func loadData() {
-//        UserDefaults.trendingItems.compactMap {
-//            try? JSONDecoder().decode(WallpaperUIItem.self, from: $0)
-//        }
+        //        UserDefaults.trendingItems.compactMap {
+        //            try? JSONDecoder().decode(WallpaperUIItem.self, from: $0)
+        //        }
         
-        let repository = FirebaseDatabaseImpl()
-        
-        repository.fetchTrendingDocuments { results, error in
-            let wallpapers = results?.compactMap { document in
-                var wallpaper = try? document.data(as: WallpaperUIItem.self)
-                wallpaper?.documentID = document.documentID
-                // wallpaper?.category = self.wallpaper?.category
-                return wallpaper
+        viewModel.fetchTrendingDocuments { [weak self] items, error in
+            if let error = error {
+                print("Error fetching trending documents: \(error.localizedDescription)")
+            } else {
+                
+                
+                DispatchQueue.main.async {
+                    
+                        self?.items = (items ?? []).reversed()
+                        self?.collectionView.reloadData()
+                    }
+                }
             }
-            
-            
-            DispatchQueue.main.async {
-                self.items = (wallpapers ?? []).reversed()
-                self.collectionView.reloadData()
-            }
-            
         }
+        
+        
+        //        let repository = FirebaseDatabaseImpl()
+        //
+        //        repository.fetchTrendingDocuments { results, error in
+        //            let wallpapers = results?.compactMap { document in
+        //                var wallpaper = try? document.data(as: WallpaperUIItem.self)
+        //                wallpaper?.documentID = document.documentID
+        //                // wallpaper?.category = self.wallpaper?.category
+        //                return wallpaper
+        //            }
+        //
+        //
+        //            DispatchQueue.main.async {
+        //                self.items = (wallpapers ?? []).reversed()
+        //                self.collectionView.reloadData()
+        //            }
+        //
+        //        }
     }
     
-}
+
 
 extension TrendingViewController {
     private func showIntroduction() {
@@ -80,7 +98,7 @@ extension TrendingViewController: UICollectionViewDataSource {
                 print("Error loading image: \(error)")
             }
         }
-      
+        
         return cell
     }
 }

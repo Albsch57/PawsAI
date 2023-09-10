@@ -12,6 +12,9 @@ class CardViewController: BaseModalityViewController {
     
     var wallpaper: WallpaperUIItem! = nil
     
+    private let viewModel = CardViewModel()
+    
+    
     private var cardView: CardView {
         view as! CardView
     }
@@ -149,8 +152,10 @@ extension CardViewController {
     @objc
     private func saveWasSuccessAddedToPhotoLibrary() {
         print("Картинка успешно загружена!")
-        let repository = FirebaseDatabaseImpl()
-        repository.increaseScore(for: wallpaper.documentID, collection: wallpaper.category!.title)
+        viewModel.increaseScore(for: wallpaper.documentID, collection: wallpaper.category!.title)
+        
+//        let repository = FirebaseDatabaseImpl()
+//        repository.increaseScore(for: wallpaper.documentID, collection: wallpaper.category!.title)
         
     }
     
