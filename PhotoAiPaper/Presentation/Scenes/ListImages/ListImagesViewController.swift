@@ -12,7 +12,7 @@ final class ListImagesViewController: BaseViewController {
     
     var category: Category! = nil
     
-    private let viewModel = ListViewModel()
+    private let viewModel = ListImagesViewModel()
     private lazy var dataSource = DataSource(collectionView: collectionView, items: [])
 
     override func viewDidLoad() {
@@ -22,13 +22,15 @@ final class ListImagesViewController: BaseViewController {
         collectionView.register(BaseImageCollectionViewCell.self, forCellWithReuseIdentifier: BaseImageCollectionViewCell.reuseId)
         
         collectionView.dataSource = dataSource
+        collectionView.delegate = self
         collectionView.setCollectionViewLayout(CollectionLayout.columns(.three).layout, animated: false)
         
+        viewModel.wallpapers(for: category) { wallpapaerItems, error in
+            
         
-        viewModel.fetchItems(for: category) { [weak self] items, error in
-            if !items.isEmpty {
-                self?.dataSource.items = items
-                self?.collectionView.reloadData()
+            if let wallpapaerItems {
+                self.dataSource.items = wallpapaerItems
+                self.collectionView.reloadData()
             }
         }
     }
@@ -54,19 +56,21 @@ fileprivate final class DataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BaseImageCollectionViewCell.reuseId, for: indexPath) as! BaseImageCollectionViewCell
         let item = items[indexPath.row]
         
-        item.imagePlaceholder { url, error in
-            SDWebImageManager.shared.loadImage(with: url, progress: nil) { image, _, _, _, _, _ in
-                cell.image = image?.sd_blurredImage(withRadius: 5)
-                
-                item.imagePreview { url, error in
-                    SDWebImageManager.shared.loadImage(with: url, progress: nil) { image, _, _, _, _, _ in
-                        cell.image = image?.sd_resizedImage(with: cell.bounds.size, scaleMode: .aspectFill)
-                    }
-                }
+        cell.backgroundColor = .systemGray6
+        
+        item.image(for: .mini) { result in
+            if case .success(let image) = result {
+                cell.image = image?.preparingThumbnail(of: cell.bounds.size)
             }
         }
         
-        
         return cell
+    }
+}
+
+extension ListImagesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = dataSource.items[indexPath.row]
+        presentCard(for: item)
     }
 }

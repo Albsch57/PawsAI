@@ -31,9 +31,18 @@ class SettingsCollectionViewCell: UICollectionViewCell {
         return UIButton(configuration: configuration)
     }()
     
+    let modeSwitch: UISwitch = {
+        let modeSwitch = UISwitch()
+        modeSwitch.translatesAutoresizingMaskIntoConstraints = false
+        modeSwitch.isOn = ThemeService.shared.currentTheme == .dark
+        return modeSwitch
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeLayout()
+        buttonIcon.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        modeSwitch.addTarget(self, action: #selector(buttonTapped), for: .valueChanged)
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +65,12 @@ class SettingsCollectionViewCell: UICollectionViewCell {
             imageIcon.image = UIImage(named: "mode")
             buttonIcon.setTitle("Night Mode", for: .normal)
             
+            contentView.addSubview(modeSwitch)
+            
+            NSLayoutConstraint.activate([
+                modeSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+                modeSwitch.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ])
         }
         
         
@@ -68,8 +83,6 @@ class SettingsCollectionViewCell: UICollectionViewCell {
 
 extension SettingsCollectionViewCell {
     private func makeLayout() {
-        
-        buttonIcon.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         
         contentView.backgroundColor = .systemGray6
         layer.cornerRadius = 15
@@ -87,7 +100,7 @@ extension SettingsCollectionViewCell {
             
             buttonIcon.leadingAnchor.constraint(equalTo: imageIcon.trailingAnchor, constant: 16),
             buttonIcon.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-  //          buttonIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            //          buttonIcon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             buttonIcon.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
             
         ])
@@ -96,6 +109,9 @@ extension SettingsCollectionViewCell {
     }
     
     @objc private func buttonTapped() {
-            delegate?.settingsCellButtonTapped(self)
-        }
+        delegate?.settingsCellButtonTapped(self)
+    }
+    
+
+    
 }

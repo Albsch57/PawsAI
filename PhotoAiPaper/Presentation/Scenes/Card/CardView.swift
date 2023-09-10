@@ -8,13 +8,15 @@
 import UIKit
 
 class CardView: UIView {
-
+    
     let imageFont: UIImageView = {
         var image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
+        image.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        image.contentMode = .scaleAspectFill
+        image.backgroundColor = .gray
         return image
     }()
-    
+ 
     let lookButton: UIButton = {
         var configuration = UIButton.Configuration.plain()
         configuration.image = .init(named: "look")
@@ -50,7 +52,11 @@ class CardView: UIView {
     required init?(coder: NSCoder) {
         fatalError()
     }
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageFont.frame = bounds
+    }
 }
 
 extension CardView {
@@ -62,18 +68,17 @@ extension CardView {
         stackView.addArrangedSubview(favoriteButton)
         addSubview(stackView)
         
+
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            imageFont.topAnchor.constraint(equalTo: topAnchor),
-            imageFont.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageFont.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageFont.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -136)
-        
+            
         ])
     }
     
 }
+
+

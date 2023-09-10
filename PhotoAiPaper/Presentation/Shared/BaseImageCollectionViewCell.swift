@@ -45,7 +45,10 @@ extension BaseImageCollectionViewCell {
     }
     
     
+    
+    
     private func makeLayout() {
+        
         contentView.addSubview(imageView)
     }
 }

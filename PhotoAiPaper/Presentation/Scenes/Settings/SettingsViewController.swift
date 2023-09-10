@@ -9,7 +9,7 @@ import UIKit
 
 final class SettingsViewController: BaseViewController {
     
-    private let dataSource = DataSource()
+    private lazy var dataSource = DataSource(parentController: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +30,19 @@ extension SettingsViewController: SettingsCollectionViewCellDelegate {
         // В зависимости от нажатой кнопки
         switch item {
         case .tell:
-            // Действия при нажатии кнопки "Tell a friend"
+            
             break
         case .feedback:
-            // Действия при нажатии кнопки "Feedback"
+            
             break
         case .about:
-            // Действия при нажатии кнопки "About us"
+            let aboutUsVC = AboutUsViewController()
+            navigationController?.pushViewController(aboutUsVC, animated: true)
             break
         case .mode:
-            // Действия при нажатии кнопки "Night Mode"
+            let currentTheme = ThemeService.shared.currentTheme
+            print(currentTheme == .dark)
+            ThemeService.shared.setTheme(currentTheme == .dark ? .light : .dark)
             break
         }
     }

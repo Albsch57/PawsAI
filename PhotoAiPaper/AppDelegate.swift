@@ -8,16 +8,31 @@
 import UIKit
 import FirebaseCore
 import FirebaseFirestore
+import FirebaseAuth
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    private lazy var migrationManager = FirebaseMigrationManager(firebaseStorageRepository: .sharedDefault)
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        Auth.auth().signInAnonymously { result, error in
+            if let error {
+                
+            }
+            
+            
+        }
         
+//
+//        SDImageCache.shared.clearMemory()
+//        SDImageCache.shared.clearDisk()
+//        Firestore.firestore().clearPersistence()
+    //    migrationManager.startMigration()
         return true
     }
 

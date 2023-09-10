@@ -25,7 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = tabBar
-//        window?.rootViewController = UIVideoEditorController(rootViewController: AboutUsViewController())
+        
+ //       window?.rootViewController = UINavigationController(rootViewController: LookPageViewController())
+        
+        window?.overrideUserInterfaceStyle = UIUserInterfaceStyle(rawValue: UserDefaults.appTheme) ?? .light
         window?.makeKeyAndVisible()
     }
 

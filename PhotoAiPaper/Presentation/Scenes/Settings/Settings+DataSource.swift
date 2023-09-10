@@ -13,8 +13,12 @@ extension SettingsViewController {
         var items: [SettingsItem] =
             [.tell, .feedback, .about, .mode]
         
+        weak var pc: SettingsViewController?
         
-        
+        init(parentController: SettingsViewController) {
+            pc = parentController
+        }
+
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             items.count
         }
@@ -22,7 +26,7 @@ extension SettingsViewController {
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let item = items[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingsCollectionViewCell.reuseId, for: indexPath) as! SettingsCollectionViewCell
-            
+            cell.delegate = pc
         
             cell.configure(with: item)
             

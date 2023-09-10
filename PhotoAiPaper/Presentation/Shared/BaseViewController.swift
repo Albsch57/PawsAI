@@ -9,15 +9,9 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    let collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
-        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collectionView.alwaysBounceVertical = false
-        return collectionView
-    }()
+    let collectionView = UICollectionView.makeBaseCollectionView()
     
-    
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
@@ -30,18 +24,19 @@ class BaseViewController: UIViewController {
         makeCollection()
     }
     
-}
-
-
-extension BaseViewController {
-    private func makeLogo() {
+    open func makeLogo() {
         let image = UIImage(named: "icon")
-
+        
         let imageView = UIImageView(image: image)
         imageView.contentMode = .center
-
+        
         navigationItem.titleView = imageView
     }
+    
+    
+}
+
+extension BaseViewController {
     
     private func makeCollection() {
         collectionView.frame = view.bounds

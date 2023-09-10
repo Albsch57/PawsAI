@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420C99F92A9C98D600096B53 /* LookPageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420C99F82A9C98D600096B53 /* LookPageDataSource.swift */; };
 		4210A78F2A7D61FD004D52DE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4210A78E2A7D61FD004D52DE /* SDWebImage */; };
+		4211DEA62A99021600ABF37E /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4211DEA52A99021600ABF37E /* Extension+UIViewController.swift */; };
+		42243DC82A93BE81000879BC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42243DC72A93BE81000879BC /* UserDefaultsManager.swift */; };
 		422D8EB62A83ED28002FD739 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D8EB52A83ED28002FD739 /* ImageLoader.swift */; };
 		422D8EB82A83EEEC002FD739 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D8EB72A83EEEC002FD739 /* Extension+Array.swift */; };
 		423B18B92A779DD70048E511 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 423B18B82A779DD70048E511 /* FirebaseAuth */; };
@@ -16,6 +19,10 @@
 		423B18BF2A77A07B0048E511 /* FirebaseRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B18BE2A77A07B0048E511 /* FirebaseRepositoryImpl.swift */; };
 		423B18C32A77A3830048E511 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423B18C22A77A3830048E511 /* GoogleService-Info.plist */; };
 		423B9E442A8681F700425226 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 423B9E432A8681F700425226 /* FirebaseFirestoreSwift */; };
+		423B9E462A868B1200425226 /* FirebaseMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B9E452A868B1200425226 /* FirebaseMigrationManager.swift */; };
+		423B9E482A8698B800425226 /* ListImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B9E472A8698B800425226 /* ListImagesViewModel.swift */; };
+		423B9E4A2A8698D600425226 /* FirestoreDatabase+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B9E492A8698D600425226 /* FirestoreDatabase+Repository.swift */; };
+		423B9E4C2A86994900425226 /* FirebaseDatabase+Impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B9E4B2A86994900425226 /* FirebaseDatabase+Impl.swift */; };
 		4246B1DE2A75570500DC913B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B1DD2A75570500DC913B /* AppDelegate.swift */; };
 		4246B1E02A75570500DC913B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B1DF2A75570500DC913B /* SceneDelegate.swift */; };
 		4246B1E22A75570500DC913B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B1E12A75570500DC913B /* CategoriesViewController.swift */; };
@@ -34,13 +41,14 @@
 		4246B2202A756F3C00DC913B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B21F2A756F3C00DC913B /* CategoryCollectionViewCell.swift */; };
 		4246B2222A756F9700DC913B /* BaseImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2212A756F9700DC913B /* BaseImageCollectionViewCell.swift */; };
 		4246B2242A76ACFF00DC913B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2232A76ACFF00DC913B /* BaseViewController.swift */; };
-		4246B22B2A76B6A200DC913B /* Trending+CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B22A2A76B6A200DC913B /* Trending+CollectionDataSource.swift */; };
 		4246B2382A76CBA500DC913B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2372A76CBA500DC913B /* CardViewController.swift */; };
 		4246B23A2A76CC2F00DC913B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2392A76CC2F00DC913B /* CardView.swift */; };
-		4246B2402A76D69F00DC913B /* Favorite+CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B23F2A76D69F00DC913B /* Favorite+CollectionDataSource.swift */; };
 		4246B2442A76D9D400DC913B /* SettingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2432A76D9D400DC913B /* SettingsCollectionViewCell.swift */; };
 		4246B2462A76D9F400DC913B /* Settings+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2452A76D9F400DC913B /* Settings+DataSource.swift */; };
 		4246B2482A76DDCE00DC913B /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4246B2472A76DDCE00DC913B /* SettingsItem.swift */; };
+		42479D1A2A9BA76900B6EF02 /* LookPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42479D192A9BA76900B6EF02 /* LookPageViewController.swift */; };
+		42479D1E2A9BAB4000B6EF02 /* LookPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42479D1D2A9BAB4000B6EF02 /* LookPageCollectionViewCell.swift */; };
+		42479D202A9BB0D300B6EF02 /* LookPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42479D1F2A9BB0D300B6EF02 /* LookPageItem.swift */; };
 		4265A93C2A7A305500ED9B81 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265A93B2A7A305500ED9B81 /* IntroductionViewController.swift */; };
 		4265A93E2A7A308300ED9B81 /* IntroductionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265A93D2A7A308300ED9B81 /* IntroductionCollectionViewCell.swift */; };
 		4265A9412A7A30C100ED9B81 /* Introduction+CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265A9402A7A30C100ED9B81 /* Introduction+CollectionDataSource.swift */; };
@@ -50,23 +58,31 @@
 		4265A94A2A7AAB9100ED9B81 /* WallPaperItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4265A9492A7AAB9100ED9B81 /* WallPaperItem.swift */; };
 		42B05C6B2A83E02A006F459A /* WallpaperUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B05C6A2A83E02A006F459A /* WallpaperUseCase.swift */; };
 		42B70AFB2A801D1800225734 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B70AFA2A801D1800225734 /* AboutUsViewController.swift */; };
-		42D3B6132A8134F600BBD4A4 /* CoreData+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6122A8134F600BBD4A4 /* CoreData+Persistence.swift */; };
-		42D3B6162A81356100BBD4A4 /* WallpaperModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6142A81356100BBD4A4 /* WallpaperModel.xcdatamodeld */; };
+		42B950E32A9657A2008E4E63 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B950E22A9657A2008E4E63 /* ThemeService.swift */; };
+		42B950E52A965CD0008E4E63 /* Extension+UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B950E42A965CD0008E4E63 /* Extension+UIApplication.swift */; };
+		42BCC2C82A9D0C9F00995DC3 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BCC2C72A9D0C9F00995DC3 /* Extension+UICollectionView.swift */; };
+		42BD2F6B2A9CF3F700176E0F /* BaseModalityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BD2F6A2A9CF3F700176E0F /* BaseModalityViewController.swift */; };
 		42D3B6202A81384B00BBD4A4 /* Wallpaper+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B61E2A81384B00BBD4A4 /* Wallpaper+CoreDataClass.swift */; };
 		42D3B6212A81384B00BBD4A4 /* Wallpaper+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B61F2A81384B00BBD4A4 /* Wallpaper+CoreDataProperties.swift */; };
-		42D3B6242A8138D600BBD4A4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6232A8138D600BBD4A4 /* ListViewModel.swift */; };
 		42D3B6262A813C6E00BBD4A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6252A813C6E00BBD4A4 /* Constants.swift */; };
 		42D3B6282A813FFC00BBD4A4 /* CoreData+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6272A813FFC00BBD4A4 /* CoreData+Repository.swift */; };
-		42D3B62A2A8141E000BBD4A4 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3B6292A8141E000BBD4A4 /* CoreDataRepository.swift */; };
+		42E0CEEA2AA6161C00CE72B7 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0CEE92AA6161C00CE72B7 /* CardViewModel.swift */; };
 		F527C0B70538F69AD71BF90E /* Pods_PhotoAiPaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8E663A4FF66C7012D07ED3 /* Pods_PhotoAiPaper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14DCE44A638E16AD020F8288 /* Pods-PhotoAiPaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAiPaper.debug.xcconfig"; path = "Target Support Files/Pods-PhotoAiPaper/Pods-PhotoAiPaper.debug.xcconfig"; sourceTree = "<group>"; };
+		420C99F82A9C98D600096B53 /* LookPageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookPageDataSource.swift; sourceTree = "<group>"; };
+		4211DEA52A99021600ABF37E /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		42243DC72A93BE81000879BC /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		422D8EB52A83ED28002FD739 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		422D8EB72A83EEEC002FD739 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		423B18BE2A77A07B0048E511 /* FirebaseRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepositoryImpl.swift; sourceTree = "<group>"; };
 		423B18C22A77A3830048E511 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		423B9E452A868B1200425226 /* FirebaseMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMigrationManager.swift; sourceTree = "<group>"; };
+		423B9E472A8698B800425226 /* ListImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImagesViewModel.swift; sourceTree = "<group>"; };
+		423B9E492A8698D600425226 /* FirestoreDatabase+Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreDatabase+Repository.swift"; sourceTree = "<group>"; };
+		423B9E4B2A86994900425226 /* FirebaseDatabase+Impl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseDatabase+Impl.swift"; sourceTree = "<group>"; };
 		4246B1DA2A75570500DC913B /* PhotoAiPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoAiPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4246B1DD2A75570500DC913B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4246B1DF2A75570500DC913B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,13 +103,14 @@
 		4246B21F2A756F3C00DC913B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4246B2212A756F9700DC913B /* BaseImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4246B2232A76ACFF00DC913B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		4246B22A2A76B6A200DC913B /* Trending+CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trending+CollectionDataSource.swift"; sourceTree = "<group>"; };
 		4246B2372A76CBA500DC913B /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		4246B2392A76CC2F00DC913B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		4246B23F2A76D69F00DC913B /* Favorite+CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CollectionDataSource.swift"; sourceTree = "<group>"; };
 		4246B2432A76D9D400DC913B /* SettingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4246B2452A76D9F400DC913B /* Settings+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+DataSource.swift"; sourceTree = "<group>"; };
 		4246B2472A76DDCE00DC913B /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		42479D192A9BA76900B6EF02 /* LookPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookPageViewController.swift; sourceTree = "<group>"; };
+		42479D1D2A9BAB4000B6EF02 /* LookPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		42479D1F2A9BB0D300B6EF02 /* LookPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookPageItem.swift; sourceTree = "<group>"; };
 		4265A93B2A7A305500ED9B81 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		4265A93D2A7A308300ED9B81 /* IntroductionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4265A9402A7A30C100ED9B81 /* Introduction+CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Introduction+CollectionDataSource.swift"; sourceTree = "<group>"; };
@@ -103,14 +120,15 @@
 		4265A9492A7AAB9100ED9B81 /* WallPaperItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallPaperItem.swift; sourceTree = "<group>"; };
 		42B05C6A2A83E02A006F459A /* WallpaperUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperUseCase.swift; sourceTree = "<group>"; };
 		42B70AFA2A801D1800225734 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
-		42D3B6122A8134F600BBD4A4 /* CoreData+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Persistence.swift"; sourceTree = "<group>"; };
-		42D3B6152A81356100BBD4A4 /* WallpaperModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WallpaperModel.xcdatamodel; sourceTree = "<group>"; };
+		42B950E22A9657A2008E4E63 /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		42B950E42A965CD0008E4E63 /* Extension+UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIApplication.swift"; sourceTree = "<group>"; };
+		42BCC2C72A9D0C9F00995DC3 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
+		42BD2F6A2A9CF3F700176E0F /* BaseModalityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModalityViewController.swift; sourceTree = "<group>"; };
 		42D3B61E2A81384B00BBD4A4 /* Wallpaper+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallpaper+CoreDataClass.swift"; sourceTree = "<group>"; };
 		42D3B61F2A81384B00BBD4A4 /* Wallpaper+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wallpaper+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		42D3B6232A8138D600BBD4A4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		42D3B6252A813C6E00BBD4A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42D3B6272A813FFC00BBD4A4 /* CoreData+Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Repository.swift"; sourceTree = "<group>"; };
-		42D3B6292A8141E000BBD4A4 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		42E0CEE92AA6161C00CE72B7 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		B50C92F34AF63E628A83A42A /* Pods-PhotoAiPaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoAiPaper.release.xcconfig"; path = "Target Support Files/Pods-PhotoAiPaper/Pods-PhotoAiPaper.release.xcconfig"; sourceTree = "<group>"; };
 		DC8E663A4FF66C7012D07ED3 /* Pods_PhotoAiPaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoAiPaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				422D8EB52A83ED28002FD739 /* ImageLoader.swift */,
+				42B950E22A9657A2008E4E63 /* ThemeService.swift */,
+				423B9E452A868B1200425226 /* FirebaseMigrationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				423B18BE2A77A07B0048E511 /* FirebaseRepositoryImpl.swift */,
-				42D3B6292A8141E000BBD4A4 /* CoreDataRepository.swift */,
+				423B9E4B2A86994900425226 /* FirebaseDatabase+Impl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -153,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				422D8EB42A83ED00002FD739 /* Services */,
-				42D3B6172A81375100BBD4A4 /* Persitence */,
 				423B18C02A77A0820048E511 /* RepositoryImpl */,
 			);
 			path = Infrastructure;
@@ -221,6 +240,7 @@
 				4246B1F72A75594200DC913B /* Favorite */,
 				4246B1F82A75595300DC913B /* Settings */,
 				4246B1F92A75597500DC913B /* Card */,
+				42479D182A9BA75500B6EF02 /* LookPage */,
 				4246B1FA2A75599200DC913B /* Introduction */,
 				4246B1F62A75593000DC913B /* ListImages */,
 			);
@@ -240,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				4246B2112A75647D00DC913B /* TrendingViewController.swift */,
-				4246B22A2A76B6A200DC913B /* Trending+CollectionDataSource.swift */,
 				4246B2132A75648400DC913B /* View */,
 			);
 			path = Trending;
@@ -250,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				4265A9442A7AA6B400ED9B81 /* ListImagesViewController.swift */,
-				42D3B6232A8138D600BBD4A4 /* ListViewModel.swift */,
+				423B9E472A8698B800425226 /* ListImagesViewModel.swift */,
 			);
 			path = ListImages;
 			sourceTree = "<group>";
@@ -258,7 +277,6 @@
 		4246B1F72A75594200DC913B /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				4246B23F2A76D69F00DC913B /* Favorite+CollectionDataSource.swift */,
 				4246B20E2A75645700DC913B /* FavoriteViewController.swift */,
 				4246B2102A75646100DC913B /* View */,
 			);
@@ -281,6 +299,7 @@
 			children = (
 				4246B2372A76CBA500DC913B /* CardViewController.swift */,
 				4246B2392A76CC2F00DC913B /* CardView.swift */,
+				42E0CEE92AA6161C00CE72B7 /* CardViewModel.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -332,6 +351,7 @@
 				4246B2172A75686900DC913B /* CollectionLayout.swift */,
 				4246B2212A756F9700DC913B /* BaseImageCollectionViewCell.swift */,
 				4246B2232A76ACFF00DC913B /* BaseViewController.swift */,
+				42BD2F6A2A9CF3F700176E0F /* BaseModalityViewController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -341,6 +361,7 @@
 			children = (
 				4246B2092A755EFA00DC913B /* Extensions */,
 				42D3B6252A813C6E00BBD4A4 /* Constants.swift */,
+				42243DC72A93BE81000879BC /* UserDefaultsManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -349,6 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				4246B20A2A755F0E00DC913B /* Extension+UIColor.swift */,
+				42BCC2C72A9D0C9F00995DC3 /* Extension+UICollectionView.swift */,
+				4211DEA52A99021600ABF37E /* Extension+UIViewController.swift */,
+				42B950E42A965CD0008E4E63 /* Extension+UIApplication.swift */,
 				422D8EB72A83EEEC002FD739 /* Extension+Array.swift */,
 			);
 			path = Extensions;
@@ -377,6 +401,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		42479D182A9BA75500B6EF02 /* LookPage */ = {
+			isa = PBXGroup;
+			children = (
+				42479D192A9BA76900B6EF02 /* LookPageViewController.swift */,
+				420C99F82A9C98D600096B53 /* LookPageDataSource.swift */,
+				42479D1D2A9BAB4000B6EF02 /* LookPageCollectionViewCell.swift */,
+				42479D1F2A9BB0D300B6EF02 /* LookPageItem.swift */,
+			);
+			path = LookPage;
+			sourceTree = "<group>";
+		};
 		4265A93F2A7A309600ED9B81 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				4265A9462A7AAADC00ED9B81 /* Firebase+Repository.swift */,
+				423B9E492A8698D600425226 /* FirestoreDatabase+Repository.swift */,
 				42D3B6272A813FFC00BBD4A4 /* CoreData+Repository.swift */,
 			);
 			path = Repositories;
@@ -400,23 +436,6 @@
 				42B05C6A2A83E02A006F459A /* WallpaperUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		42D3B6172A81375100BBD4A4 /* Persitence */ = {
-			isa = PBXGroup;
-			children = (
-				42D3B6192A8137A700BBD4A4 /* CoreData */,
-			);
-			path = Persitence;
-			sourceTree = "<group>";
-		};
-		42D3B6192A8137A700BBD4A4 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				42D3B6122A8134F600BBD4A4 /* CoreData+Persistence.swift */,
-				42D3B6142A81356100BBD4A4 /* WallpaperModel.xcdatamodeld */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		42D3B6222A81387A00BBD4A4 /* Wallpaper+CoreData */ = {
@@ -553,32 +572,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D3B6162A81356100BBD4A4 /* WallpaperModel.xcdatamodeld in Sources */,
 				4265A94A2A7AAB9100ED9B81 /* WallPaperItem.swift in Sources */,
 				4265A93C2A7A305500ED9B81 /* IntroductionViewController.swift in Sources */,
 				4246B2202A756F3C00DC913B /* CategoryCollectionViewCell.swift in Sources */,
 				42D3B6212A81384B00BBD4A4 /* Wallpaper+CoreDataProperties.swift in Sources */,
 				4265A9432A7A362200ED9B81 /* IntroductionItem.swift in Sources */,
 				4246B23A2A76CC2F00DC913B /* CardView.swift in Sources */,
-				42D3B6132A8134F600BBD4A4 /* CoreData+Persistence.swift in Sources */,
 				4265A9452A7AA6B400ED9B81 /* ListImagesViewController.swift in Sources */,
+				423B9E462A868B1200425226 /* FirebaseMigrationManager.swift in Sources */,
+				42E0CEEA2AA6161C00CE72B7 /* CardViewModel.swift in Sources */,
 				4246B1E22A75570500DC913B /* CategoriesViewController.swift in Sources */,
 				4246B20D2A75621B00DC913B /* TabBarItem.swift in Sources */,
 				4246B2442A76D9D400DC913B /* SettingsCollectionViewCell.swift in Sources */,
 				4246B2152A7564AA00DC913B /* SettingsViewController.swift in Sources */,
+				42479D1E2A9BAB4000B6EF02 /* LookPageCollectionViewCell.swift in Sources */,
 				4246B2012A755B5700DC913B /* Category.swift in Sources */,
 				422D8EB62A83ED28002FD739 /* ImageLoader.swift in Sources */,
-				4246B22B2A76B6A200DC913B /* Trending+CollectionDataSource.swift in Sources */,
+				4211DEA62A99021600ABF37E /* Extension+UIViewController.swift in Sources */,
 				42B70AFB2A801D1800225734 /* AboutUsViewController.swift in Sources */,
 				4246B2242A76ACFF00DC913B /* BaseViewController.swift in Sources */,
 				4246B20B2A755F0F00DC913B /* Extension+UIColor.swift in Sources */,
+				42B950E52A965CD0008E4E63 /* Extension+UIApplication.swift in Sources */,
 				4246B2382A76CBA500DC913B /* CardViewController.swift in Sources */,
+				42479D202A9BB0D300B6EF02 /* LookPageItem.swift in Sources */,
 				4246B2462A76D9F400DC913B /* Settings+DataSource.swift in Sources */,
+				42B950E32A9657A2008E4E63 /* ThemeService.swift in Sources */,
 				422D8EB82A83EEEC002FD739 /* Extension+Array.swift in Sources */,
 				42D3B6262A813C6E00BBD4A4 /* Constants.swift in Sources */,
 				4246B21E2A756E6100DC913B /* Categories+CollectionDataSource.swift in Sources */,
+				423B9E482A8698B800425226 /* ListImagesViewModel.swift in Sources */,
 				4246B20F2A75645700DC913B /* FavoriteViewController.swift in Sources */,
 				4265A9472A7AAADC00ED9B81 /* Firebase+Repository.swift in Sources */,
+				42243DC82A93BE81000879BC /* UserDefaultsManager.swift in Sources */,
 				4265A9412A7A30C100ED9B81 /* Introduction+CollectionDataSource.swift in Sources */,
 				42B05C6B2A83E02A006F459A /* WallpaperUseCase.swift in Sources */,
 				4246B2222A756F9700DC913B /* BaseImageCollectionViewCell.swift in Sources */,
@@ -586,16 +611,19 @@
 				4246B1DE2A75570500DC913B /* AppDelegate.swift in Sources */,
 				423B18BF2A77A07B0048E511 /* FirebaseRepositoryImpl.swift in Sources */,
 				4246B2182A75686900DC913B /* CollectionLayout.swift in Sources */,
-				42D3B62A2A8141E000BBD4A4 /* CoreDataRepository.swift in Sources */,
+				42BD2F6B2A9CF3F700176E0F /* BaseModalityViewController.swift in Sources */,
 				42D3B6202A81384B00BBD4A4 /* Wallpaper+CoreDataClass.swift in Sources */,
 				4265A93E2A7A308300ED9B81 /* IntroductionCollectionViewCell.swift in Sources */,
+				423B9E4C2A86994900425226 /* FirebaseDatabase+Impl.swift in Sources */,
 				4246B2052A755D1C00DC913B /* TabBarController.swift in Sources */,
+				42BCC2C82A9D0C9F00995DC3 /* Extension+UICollectionView.swift in Sources */,
+				423B9E4A2A8698D600425226 /* FirestoreDatabase+Repository.swift in Sources */,
 				4246B2122A75647D00DC913B /* TrendingViewController.swift in Sources */,
+				420C99F92A9C98D600096B53 /* LookPageDataSource.swift in Sources */,
 				4246B1FD2A7559D500DC913B /* CategoriesViewModel.swift in Sources */,
-				4246B2402A76D69F00DC913B /* Favorite+CollectionDataSource.swift in Sources */,
-				42D3B6242A8138D600BBD4A4 /* ListViewModel.swift in Sources */,
 				4246B1E02A75570500DC913B /* SceneDelegate.swift in Sources */,
 				4246B2482A76DDCE00DC913B /* SettingsItem.swift in Sources */,
+				42479D1A2A9BA76900B6EF02 /* LookPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,19 +880,6 @@
 			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		42D3B6142A81356100BBD4A4 /* WallpaperModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				42D3B6152A81356100BBD4A4 /* WallpaperModel.xcdatamodel */,
-			);
-			currentVersion = 42D3B6152A81356100BBD4A4 /* WallpaperModel.xcdatamodel */;
-			path = WallpaperModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4246B1D22A75570500DC913B /* Project object */;
 }

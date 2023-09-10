@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias WallpaperUIFetcher = ([WallpaperUIItem], Error?) -> Void
-typealias ImageDownloadLoader = (URL?, Error?) -> Void
+//typealias WallpaperUIFetcher = ([WallpaperUIItem], Error?) -> Void
+//typealias ImageDownloadLoader = (URL?, Error?) -> Void
 
 enum AppConfig {
     static let rootCategoryPath = "Categories"

@@ -15,7 +15,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         delegate = self
         tabBar.tintColor = .accentBlue
-        tabBar.unselectedItemTintColor = .systemGray6
+        tabBar.unselectedItemTintColor = .systemGray
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {

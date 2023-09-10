@@ -20,6 +20,7 @@ final class FirebaseRepositoryImpl: FirebaseStorageRepository {
         // Create a reference to the category folder in Firebase Storage
         let rootReference = storage.reference().child(AppConfig.rootCategoryPath).child(category.rawValue.capitalized)
         
+        
         // List all items in the category folder
         rootReference.listAll { listResult, error in
             // Handle any errors that might occur during listing

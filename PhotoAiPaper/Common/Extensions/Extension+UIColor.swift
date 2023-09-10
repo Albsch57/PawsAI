@@ -9,6 +9,7 @@ import UIKit
 
 extension UIColor {
     class var accentBlue: UIColor {
-        UIColor(red: 26/255, green: 59/255, blue: 121/255, alpha: 1)
+        UIColor(named: "accentBlue")!
+//        UIColor(red: 26/255, green: 59/255, blue: 121/255, alpha: 1)
     }
 }
